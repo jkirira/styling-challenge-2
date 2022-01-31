@@ -1,9 +1,10 @@
 $notification-color: #259ee9;
 $grey: #23282b;
+$light-grey: #d3d3d3;
 $dark-grey: #0f171b;
 $orange: #f38e32;
 $maroon: #951d39;
-$layovr: #b29759;
+$layover: #b29759;
 $light-green: #a4d464;
 $green: #8cb959;
 $dark-green: #107c67;
@@ -17,6 +18,7 @@ $black: #000000;
   padding: 0;
   margin: 0;
   font-family: 'Roboto', sans-serif;
+
 }
 
 @mixin container{
@@ -57,6 +59,7 @@ body{
 }
 
 .header{
+  font-weight: lighter;
   background: $grey;
   display: flex;
   justify-content: space-between;
@@ -82,8 +85,19 @@ body{
   display: flex;
 }
 
+.book-nav{
+  display: flex;
+  width: 200px;
+}
+
+.book-button{
+  width: 100%;
+  display: flex;
+  @include flex-center;
+}
+
 .nav-item{
-  padding: 10px;
+  padding: 10px 30px;
   display: flex;
   @include flex-center;
 }
@@ -96,6 +110,9 @@ body{
   padding: 0 15%;
   display: flex;
   align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-weight: 300;
 }
 
 .splash-text{
@@ -106,6 +123,7 @@ body{
 }
 .splash-button{
   padding-top: 50px;
+  font-weight: 500;
 }
 
 .splash-button button{
@@ -122,7 +140,7 @@ body{
 }
 
 .form-div{
-  width: 450px;
+  width: 550px;
   height: 500px;
   position: absolute;
   right: 150px;
@@ -130,18 +148,20 @@ body{
 }
 
 .form-header{
-  height: 10%;
+  height: 15%;
   display: flex;
   align-items: center;
   justify-content: center;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
+  font-weight: 500;
   font-size: 1.1rem;
 }
 
 .form-div form{
-  height: 90%;
+  height: 85%;
   background: $white;
   padding: 30px 0;
+  color: #e7e8e9;
 }
 
 .form-item{
@@ -151,12 +171,12 @@ body{
   padding: 10px;
 }
 .form-item{
-  padding: 20px;
+  padding: 10px 20px;
 }
 
 .form-item input{
-  color: $grey;
-  border-color: $grey;
+  color: #e7e8e9;
+  border: 2px solid #e7e8e9;
   min-height: 40px;
   padding-left: 10px;
 }
@@ -167,7 +187,8 @@ input[type="range"]{
   display: flex;
   flex-direction: column;
   padding: 20px;
-  color: grey;
+  color: #d3d3d3;
+
 }
 
 .block-form-item span{
@@ -178,7 +199,6 @@ input[type="range"]{
   max-width: 45%;
   height: 50px;
   letter-spacing: 3px;
-  padding: 20px;
   font-size: x-small;
 }
 
@@ -199,11 +219,13 @@ input[type="range"]{
   padding: 20px;
 }
 .second-text-header{
-  font-size: 3rem;
+  font-size: 2.8rem;
+  font-weight: 500;
 }
 .second-text-text{
-  color: grey;
+  color: $light-grey;
   font-size: 1.5rem;
+  font-weight: 300;
 }
 
 .second-img{
@@ -211,17 +233,20 @@ input[type="range"]{
 }
 
 .grey-button{
-  border-color: grey;
-  color: grey;
+  border: 2px solid $light-grey;
+  background: $white;
+  color: $light-grey;
   padding: 20px 40px;
   border-radius: 50px;
   font-size: 1.1rem;
   letter-spacing: 3px;
+  font-weight: 600px;
 }
 
 .second-img img{
   max-width: 100%;
   max-height: 100%;
+  transform: scaleX(-1);
 }
 
 .third{
@@ -248,11 +273,13 @@ input[type="range"]{
 
 .third-text-header{
   font-size: 3rem;
+  font-weight: 200;
 }
 
 .third-text-body{
   font-size: 1.5rem;
   padding: 20px 0;
+  font-weight: 300;
 }
 
 .third-form{
@@ -269,7 +296,6 @@ input[type="range"]{
   padding-bottom: 5px;
 }
 
-
 .third-form .block-form-item input {
   height: 50px;
   color: grey;
@@ -283,11 +309,11 @@ input[type="range"]{
 .search-div{
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 20px 0;
 }
 .search-button{
   height: 50px;
-  width: 80px;
+  width: 90px;
 }
 
 //.horizontal-form{
@@ -303,28 +329,40 @@ input[type="range"]{
 
 .fourth-item{
   padding: 20% 25% 0;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   text-align: center;
+}
+
+.fourth-item-header{
+  font-weight: 600;
 }
 
 .fourth-item-text{
   padding-top: 20px;
+  font-weight: 200;
 }
 
 .fourth-item-link{
   padding-top: 70px;
-}
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 30px;}
 
 .amara{
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("waterfall.jpg");
+  background-size: cover;
 }
 
 .situ{
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("gated_community.jpeg");
+  background-size: cover;
 }
 
 .alma{
   background: $maroon;
+  background-size: cover;
 }
 
 .carousel{
@@ -355,7 +393,12 @@ input[type="range"]{
 .card-image{
   position: relative;
   height: 330px;
-  width: 350px;
+  min-width: 350px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: fill;
+
 }
 
 .date-container{
@@ -363,7 +406,7 @@ input[type="range"]{
   left: 0;
   bottom: 0;
   height: 150px;
-  width: 90px;
+  width: 95px;
 }
 
 .date{
@@ -374,6 +417,7 @@ input[type="range"]{
   align-items: center;
   font-size: 2.5rem;
   justify-content: flex-end;
+  font-weight: 600;
 }
 
 .date-bottom{
@@ -383,10 +427,13 @@ input[type="range"]{
   display: flex;
   justify-content: center;
   padding: 2px;
+  align-items: center;
+  font-weight: 600;
 }
 
 .card-text{
   padding: 10px;
+  background: #f3f4f5;
 }
 
 .card-text-header{
@@ -397,6 +444,11 @@ input[type="range"]{
 .card-text-body{
   display: flex;
   justify-content: space-between;
+  color: #858687;
+}
+
+.read-time{
+  font-size: 0.7rem;
 }
 
 .fifth{
@@ -405,6 +457,9 @@ input[type="range"]{
   height: 515px;
   padding-top: 150px;
   color: $white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: fill;
 }
 
 .fifth-text{
@@ -423,16 +478,20 @@ input[type="range"]{
   @include container;
   text-align: center;
   padding-top: 50px;
+  background: #f0f1f2;
 }
 
 .sixth-text-header{
   font-size: 2rem;
   padding-bottom: 10px;
   line-height: 3rem;
+  font-weight: 600;
 }
 .sixth-text-body {
   font-size: 1.5rem;
   padding-bottom: 10px;
+  color: #929596;
+  font-weight: 300;
 }
 .sixth-form{
   padding: 20px 100px;
@@ -446,30 +505,38 @@ input[type="range"]{
   height: 80px;
   padding-left: 30px;
   font-size: 1.3rem;
+  font-weight: 300;
+  color: #929596;
 }
 .sixth-button{
-  font-size: 1.25px;
+  font-size: 1.5rem;
+  font-weight: 700;
   height: 80px;
   width: 300px;
   margin-left: 30px;
+  background: $light-green;
+  color: $white;
+  border: $light-green;
 }
-
 
 .seventh{
   height: 225px;
   color: $white;
-  background: lightblue;
+  background-image: linear-gradient(to right, #107c67, #30936b, #53aa6c, #79bf69, #a4d464);;
 }
 .seventh-header{
   text-align: center;
   font-size: 2.3rem;
   padding: 50px;
+  font-weight: 600;
 }
 
 .seventh-body{
   display: flex;
   justify-content: center;
   font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .seventh-body div{
@@ -478,7 +545,7 @@ input[type="range"]{
 
 .eighth{
   height: 380px;
-  background: $grey;
+  background: #111213;
   padding: 0 10%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -504,15 +571,19 @@ input[type="range"]{
 .contact-body{
   padding: 20px 0;
   font-size: 1.1rem;
+  line-height: 1.8rem;
 }
+.text-gray{
+  color: #929596;
 
+}
 .nine{
   @include container;
-  border-top: 2px solid lightgrey;
+  border-top: 2px solid #3f3f3f;
   display: flex;
   justify-content: center;
   background: $grey;
-  color: $white;
+  color: #929596;
 }
 
 .nine-link, .social-media{
@@ -522,7 +593,7 @@ input[type="range"]{
 .footer{
   height: 180px;
   background: $black;
-  color: lightgray;
+  color: #3f3f3f;
 }
 
 .footer div{
@@ -532,13 +603,17 @@ input[type="range"]{
 
 .social-media{
   padding:25px;
+  font-size: 2rem;
 }
 
 .social-media-icon{
-  border: 2px solid lightgray;
+  border: 2px solid #3f3f3f;
   border-radius: 50%;
   width: 75px;
   height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
