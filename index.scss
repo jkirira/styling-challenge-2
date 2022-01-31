@@ -54,8 +54,6 @@ body{
   height: 75px;
   display: flex;
   color: $white;
-  justify-content: space-between;
-  font-size: 1.2rem;
 }
 
 .header{
@@ -68,7 +66,7 @@ body{
 }
 
 .logo{
-
+  padding-left: 30px;
 }
 
 .logo img{
@@ -78,8 +76,9 @@ body{
 }
 
 .nav{
-  display: flex;
+  display: none;
 }
+
 .sub-nav{
   padding: 0 10px;
   display: flex;
@@ -105,7 +104,7 @@ body{
 .splash{
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('house.jpg');
   color: $white;
-  height: 890px;
+  height: 500px;
   position: relative;
   padding: 0 15%;
   display: flex;
@@ -116,11 +115,9 @@ body{
 }
 
 .splash-text{
-  max-width: 700px;
-  font-size: 3rem;
-  line-height: 3.7rem;
-
+  font-size: 1.9rem;
 }
+
 .splash-button{
   padding-top: 50px;
   font-weight: 500;
@@ -137,6 +134,7 @@ body{
   color: $black;
   border-radius: 50px;
   padding: 20px;
+  font-weight: 600;
 }
 
 .form-div{
@@ -203,24 +201,22 @@ input[type="range"]{
 }
 
 .second{
-  height: 620px;
-  @include container;
+  height: 800px;
   padding-right: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .second-text{
   padding-top: 50px;
-  max-width: 620px;
 }
 .second-text div{
   padding: 20px;
 }
 .second-text-header{
-  font-size: 2.8rem;
+  font-size: 1.5rem;
   font-weight: 500;
+  color: $grey;
 }
 .second-text-text{
   color: $light-grey;
@@ -230,6 +226,7 @@ input[type="range"]{
 
 .second-img{
   display: flex;
+  padding-right: 10px;
 }
 
 .grey-button{
@@ -240,7 +237,7 @@ input[type="range"]{
   border-radius: 50px;
   font-size: 1.1rem;
   letter-spacing: 3px;
-  font-weight: 600px;
+  font-weight: 600;
 }
 
 .second-img img{
@@ -250,13 +247,12 @@ input[type="range"]{
 }
 
 .third{
-  @include container;
   @include flex-center;
   flex-direction: column;
   background: $bg-green;
   color: $white;
-  height: 710px;
   display: flex;
+  padding: 20px 0;
 }
 
 .third-text{
@@ -264,20 +260,14 @@ input[type="range"]{
   padding: 0 10%;
 }
 
-.horizontal-form{
-  display: grid;
-  grid-template-columns: 1fr 1fr 200px;
-  grid-gap: 30px;
-  padding: 10px;
-}
 
 .third-text-header{
-  font-size: 3rem;
+  font-size: 1.5rem;
   font-weight: 200;
 }
 
 .third-text-body{
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   padding: 20px 0;
   font-weight: 300;
 }
@@ -292,6 +282,7 @@ input[type="range"]{
   color: $white;
   font-size: 1.1rem;
 }
+
 .third-form .block-form-item label, .search-div label {
   padding-bottom: 5px;
 }
@@ -300,16 +291,17 @@ input[type="range"]{
   height: 50px;
   color: grey;
   padding-left: 10px;
-  width: 400px;
+  width: 220px;
   background: rgba(0, 0, 0, 0.5) ;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  border: none;
 }
-
 
 .search-div{
   display: flex;
   flex-direction: column;
   padding: 20px 0;
+  align-items: center;
 }
 .search-button{
   height: 50px;
@@ -322,14 +314,15 @@ input[type="range"]{
 
 .fourth{
   display: grid;
-  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 100%);
   height: 455px;
   color: $white;
+  overflow: scroll;
 }
 
 .fourth-item{
   padding: 20% 25% 0;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 
@@ -343,12 +336,14 @@ input[type="range"]{
 }
 
 .fourth-item-link{
-  padding-top: 70px;
-  font-weight: 600;
+  padding-top: 50px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: 30px;}
+  @include flex-center;
+}
+
+.fourth-item-link i{
+  display: none;
+}
 
 .amara{
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("waterfall.jpg");
@@ -366,14 +361,14 @@ input[type="range"]{
 }
 
 .carousel{
-  height: 710px;
-  padding: 100px 50px 20px;
+  padding: 10px;
   display: grid;
-  grid-template-columns: repeat(4, minmax(300px, 1fr));
+  grid-template-columns: repeat(4, 100%);
+  overflow: scroll;
 }
 
 .carousel-item{
-  padding: 40px;
+  padding: 20px;
   background: $white;
 }
 
@@ -393,7 +388,6 @@ input[type="range"]{
 .card-image{
   position: relative;
   height: 330px;
-  min-width: 350px;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -453,9 +447,10 @@ input[type="range"]{
 
 .fifth{
   @include container;
-  background: url("photo_5.jpg");
+  //background: url("photo_5.jpg");
+  background: linear-gradient(to right, rgba(0,0,0,0), $layover), url(photo_5.jpg);
   height: 515px;
-  padding-top: 150px;
+  padding-top: 100px;
   color: $white;
   background-size: cover;
   background-repeat: no-repeat;
@@ -464,17 +459,17 @@ input[type="range"]{
 
 .fifth-text{
   max-width: 500px;
-  font-size: 4rem;
+  font-size: 2.7rem;
 }
 
 .fifth-button{
   padding: 20px 30px;
   font-size: 1rem;
   letter-spacing: 3px;
+  border: none;
 }
 
 .sixth{
-  height: 285px;
   @include container;
   text-align: center;
   padding-top: 50px;
@@ -494,33 +489,34 @@ input[type="range"]{
   font-weight: 300;
 }
 .sixth-form{
-  padding: 20px 100px;
+  padding: 20px 0;
   display: flex;
 }
 .sixth-form-wrapper{
   display: flex;
+  flex-direction: column;
+}
+.sixth-form-wrapper form{
+  width: 100%;
 }
 .sixth-form-email{
-  width: 650px;
   height: 80px;
   padding-left: 30px;
   font-size: 1.3rem;
   font-weight: 300;
   color: #929596;
+  margin-bottom: 10px;
 }
 .sixth-button{
   font-size: 1.5rem;
   font-weight: 700;
-  height: 80px;
-  width: 300px;
-  margin-left: 30px;
+  height: 50px;
   background: $light-green;
   color: $white;
   border: $light-green;
 }
 
 .seventh{
-  height: 225px;
   color: $white;
   background-image: linear-gradient(to right, #107c67, #30936b, #53aa6c, #79bf69, #a4d464);;
 }
@@ -535,29 +531,27 @@ input[type="range"]{
   display: flex;
   justify-content: center;
   font-size: 1.4rem;
-  font-weight: 600;
-  letter-spacing: 1px;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+  flex-direction: column;
 }
 
 .seventh-body div{
-  padding: 0 20px;
+  padding: 20px;
+}
+.fa-bookmark{
+  padding: 10px;
 }
 
 .eighth{
-  height: 380px;
   background: #111213;
   padding: 0 10%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   color: $white;
   padding-top: 50px;
 }
 
 .eighth-three{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding-top: 50px;
-  padding-left: 150px;
+  padding: 50px 0;
 }
 
 .eighth-three p{
@@ -578,20 +572,17 @@ input[type="range"]{
 
 }
 .nine{
-  @include container;
   border-top: 2px solid #3f3f3f;
-  display: flex;
-  justify-content: center;
   background: $grey;
   color: #929596;
 }
 
 .nine-link, .social-media{
-  padding: 20px 30px;
+  padding: 15px 10px;
 }
 
 .footer{
-  height: 180px;
+  height: 120px;
   background: $black;
   color: #3f3f3f;
 }
@@ -601,19 +592,172 @@ input[type="range"]{
   justify-content: center;
 }
 
-.social-media{
-  padding:25px;
-  font-size: 2rem;
-}
-
 .social-media-icon{
   border: 2px solid #3f3f3f;
   border-radius: 50%;
-  width: 75px;
-  height: 75px;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+@media screen and (min-width: 1000px) {
+  .notification{
+    justify-content: space-between;
+    font-size: 1.2rem;
+  }
+  .nav{
+     display: flex;
+   }
+  .splash{
+    height: 890px;
+  }
+  .splash-text{
+    max-width: 700px;
+    font-size: 3rem;
+    line-height: 3.7rem;
+  }
+  .second{
+    height: 620px;
+    @include container;
+    display: grid;
+    grid-template-columns: 650px 1fr;
+    grid-gap: 10px;
+  }
+
+  .second-text{
+    max-width: 610px;
+  }
+
+  .second-text-header{
+    font-size: 2.8rem;
+  }
+  .second-text-text{
+    font-size: 1.3rem;
+  }
+
+  .third{
+    @include container;
+    height: 710px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .third-text-header{
+    font-size: 3rem;
+  }
+  .third-text-body{
+    font-size: 1.5rem;
+  }
+  .horizontal-form{
+     display: grid;
+     grid-template-columns: 1fr 1fr 200px;
+     grid-gap: 30px;
+     padding: 10px;
+   }
+
+  .third-form .block-form-item input {
+    width: 400px;
+    font-size: 1.1rem;
+  }
+  .search-div{
+    align-items: unset;
+  }
+  .fourth{
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    overflow: unset;
+  }
+  .fourth-item{
+    font-size: 1.6rem;
+  }
+  .fourth-item-link{
+    padding-top: 70px;
+    font-weight: 600;
+    padding-left: 30px;
+  }
+  .fourth-item-link i{
+    display: inline-block;
+  }
+  .carousel{
+    height: 710px;
+    padding: 100px 50px 20px;
+    grid-template-columns: repeat(4, minmax(300px, 1fr));
+    overflow: unset;
+  }
+  .carousel-item{
+    padding: 40px;
+  }
+  .card-image {
+    min-width: 350px;
+  }
+  .fifth {
+    padding-top: 150px;
+  }
+  .fifth-text{
+    font-size: 4rem;
+  }
+  .sixth {
+    height: 285px;
+  }
+  .sixth-form {
+    padding: 20px 100px;
+  }
+  .sixth-form-email {
+    width: 650px;
+    margin-bottom: unset;
+  }
+  .sixth-form-wrapper{
+    flex-direction: row;
+  }
+  .sixth-form-wrapper form{
+    width: unset;
+  }
+  .sixth-button{
+    width: 300px;
+    margin-left: 30px;
+    height: 80px;
+  }
+  .seventh {
+    height: 225px;
+  }
+  .seventh-body{
+    flex-direction: row;
+  }
+  .seventh-body div{
+    padding: 0 20px;
+  }
+  .eighth{
+    height: 380px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .eighth-three{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px 0 0 150px;
+  }
+
+  .nine{
+    @include container;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nine-link, .social-media{
+    padding: 20px 30px;
+  }
+  .footer {
+    height: 180px;
+  }
+  .social-media{
+    padding:25px;
+    font-size: 2rem;
+  }
+  .social-media-icon{
+    width: 75px;
+    height: 75px;
+  }
+
+  }
 
 
