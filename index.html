@@ -5,19 +5,24 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="output.css" type="text/css">
+    <script src="https://kit.fontawesome.com/5e756cf1de.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
     <!--blue notification-->
     <div class="notification">
         <p>Looking for a home? We got you covered! <span>Learn More</span> about our offers.</p>
+        <p>X</p>
     </div>
 
     <!-- header-->
     <div class="header">
         <div class="logo">
-            <img class="logo-img" src="cytonn-real-estate-logo.png" alt="cytonn-real-estate-logo">
+            <img class="logo-img" src="cytonn-logo-bw.jpeg" alt="cytonn-real-estate-logo">
         </div>
 
         <div class="nav">
@@ -49,7 +54,7 @@
             <div>
                 <p>We are focused on delivering investment grade real estate to our clients</p>
             </div>
-            <div>
+            <div class="splash-button">
                 <button class="white-button">GET STARTED</button>
             </div>
         </div>
@@ -59,40 +64,27 @@
             <form>
 
                 <div class="form-item">
-                    <div>
                         <input type="text" placeholder="All Actions">
-                    </div>
-                    <div>
-                        <input type="text" placeholder="All types">
-                    </div>
-                </div>
+                        <input type="text" placeholder="All types"></div>
 
                 <div class="form-item">
-                    <div>
                         <input type="text" placeholder="All Locations">
-                    </div>
-                    <div>
                         <input type="text" placeholder="All Cities">
-                    </div>
                 </div>
 
                 <div class="form-item">
-                    <div>
                         <input type="text" placeholder="Min Size">
-                    </div>
-                    <div>
                         <input type="text" placeholder="Garage Size">
-                    </div>
                 </div>
 
                 <div class="block-form-item">
                     <label>Price Range: <span>Ksh. 10,000.00</span></label>
-                    <input type="text" placeholder="Garage Size">
+                    <input type="range" min="0" max="100" value="0" step="10">
                 </div>
 
                 <div class="block-form-item">
                     <label>More Search Options</label>
-                    <button class="orange-bg">FILTER HOMES</button>
+                    <button class="orange-bg filter-button">FILTER HOMES</button>
                 </div>
 
             </form>
@@ -102,13 +94,13 @@
     <!--second-->
     <div class="second">
 
-        <div>
-            <div>A comprehensive lifestyle development in ruaka</div>
-            <div>Knowledge is power. And who doesn't like a little bit of power? From the latest real estate trends to
+        <div class="second-text">
+            <div class="second-text-header">A comprehensive lifestyle development in ruaka</div>
+            <div class="second-text-text">Knowledge is power. And who doesn't like having a little bit of power? From the latest real estate trends to
                 tips for creating unique office spaces, out team of San Diego real estate professionals has a wealth of
                 knowledge that we are eager to share.</div>
             <div>
-                <button class="white-button">FIND OUT MORE</button>
+                <button class="grey-button">FIND OUT MORE</button>
             </div>
         </div>
 
@@ -121,19 +113,19 @@
     <!--third-->
     <div class="third">
 
-        <div>
-            <div>
-                <p>We would like to do business with you</p>
+        <div class="third-text">
+            <div class="third-text-header">
+                <p>We would like to do business with you.</p>
                 <p>What exactly are you looking for?</p>
             </div>
 
-            <div>
-                making this the first true generator on the internet. It uses a dictionary of over 200 latin words
-                combined with a handful of model sentence structures to generate Lorem Ipsum which looks reasonable
+            <div class="third-text-body">
+                making this the first true generator on the internet. It uses a dictionary of over 200 latin words,
+                combined with a handful of model sentence structures to generate Lorem Ipsum which looks reasonable.
             </div>
         </div>
 
-        <div class="">
+        <div class="third-form">
             <form class="horizontal-form">
                 <div class="block-form-item">
                     <label>Price(Ksh)</label>
@@ -143,9 +135,9 @@
                     <label>Location</label>
                     <input type="text" placeholder="Select your location">
                 </div>
-                <div class="block-form-item">
-                    <label></label>
-                    <button></button>
+                <div class="search-div">
+                    <label>&nbsp</label>
+                    <button class="search-button"></button>
                 </div>
             </form>
         </div>
@@ -154,25 +146,25 @@
     <!--fourth-->
     <div class="fourth">
 
-        <div class="fourth-item">
+        <div class="fourth-item amara">
             <div>
-                <div>AMARA RIDGE</div>
-                <div>exclusive private gated community in Karen</div>
-                <div>VIEW MORE INFO </div>
+                <div class="fourth-item-header">AMARA RIDGE</div>
+                <div class="fourth-item-text">exclusive private gated community in Karen</div>
+                <div class="fourth-item-link">VIEW MORE INFO </div>
             </div>
         </div>
-        <div class="fourth-item">
+        <div class="fourth-item situ">
             <div>
-                <div>SITU VILLAGE</div>
-                <div>exclusive private gated community in Karen</div>
-                <div>VIEW MORE INFO </div>
+                <div class="fourth-item-header">SITU VILLAGE</div>
+                <div class="fourth-item-text">exclusive private gated community in Karen</div>
+                <div class="fourth-item-link">VIEW MORE INFO </div>
             </div>
         </div>
-        <div class="fourth-item">
+        <div class="fourth-item alma">
             <div>
-                <div>THE ALMA</div>
-                <div>exclusive private gated community in Karen</div>
-                <div>VIEW MORE INFO </div>
+                <div class="fourth-item-header">THE ALMA</div>
+                <div class="fourth-item-text">exclusive private gated community in Karen</div>
+                <div class="fourth-item-link">VIEW MORE INFO </div>
             </div>
         </div>
 
@@ -182,45 +174,45 @@
     <!-- Carousel -->
     <div class="carousel">
         <!--1-->
-        <div>
-            <div>
-                <img src="" alt="">
-                <div>
-                    <div>
+        <div class="carousel-item">
+
+            <div class="card-image carousel-one">
+                <div class="date-container">
+                    <div class="date">
                         <p>09</p>
                         <p>JAN</p>
                     </div>
-                    <div>READ MORE</div>
+                    <div class="date-bottom">READ MORE</div>
                 </div>
             </div>
-            <div>
-                <div>
+            <div class="card-text">
+                <div class="card-text-header">
                     Cytonn Investments:<br>taking a new step
                 </div>
-                <div>
+                <div class="card-text-body">
                     <div>Article by Joseph Owingah<br>Jan 30&nbsp;&nbsp;9 min read</div>
-                    <div></div>
+                    <div>ghjj</div>
                 </div>
             </div>
         </div>
 
         <!--2-->
-        <div>
-            <div>
-                <img src="" alt="">
-                <div>
-                    <div>
+        <div class="carousel-item">
+
+            <div class="card-image carousel-two">
+                <div class="date-container">
+                    <div class="date">
                         <p>09</p>
                         <p>JAN</p>
                     </div>
-                    <div>READ MORE</div>
+                    <div class="date-bottom">READ MORE</div>
                 </div>
             </div>
-            <div>
-                <div>
+            <div class="card-text">
+                <div class="card-text-header">
                     Cytonn Investments:<br>taking a new step
                 </div>
-                <div>
+                <div class="card-text-body">
                     <div>Article by Joseph Owingah<br>Jan 30&nbsp;&nbsp;9 min read</div>
                     <div></div>
                 </div>
@@ -228,22 +220,22 @@
         </div>
 
         <!--3-->
-        <div>
-            <div>
-                <img src="" alt="">
-                <div>
-                    <div>
+        <div class="carousel-item">
+
+            <div class="card-image carousel-three">
+                <div class="date-container">
+                    <div class="date">
                         <p>09</p>
                         <p>JAN</p>
                     </div>
-                    <div>READ MORE</div>
+                    <div class="date-bottom">READ MORE</div>
                 </div>
             </div>
-            <div>
-                <div>
+            <div class="card-text">
+                <div class="card-text-header">
                     Cytonn Investments:<br>taking a new step
                 </div>
-                <div>
+                <div class="card-text-body">
                     <div>Article by Joseph Owingah<br>Jan 30&nbsp;&nbsp;9 min read</div>
                     <div></div>
                 </div>
@@ -251,22 +243,22 @@
         </div>
 
         <!--4-->
-        <div>
-            <div>
-                <img src="" alt="">
-                <div>
-                    <div>
+        <div class="carousel-item">
+
+            <div class="card-image carousel-four">
+                <div class="date-container">
+                    <div class="date">
                         <p>09</p>
                         <p>JAN</p>
                     </div>
-                    <div>READ MORE</div>
+                    <div class="date-bottom">READ MORE</div>
                 </div>
             </div>
-            <div>
-                <div>
+            <div class="card-text">
+                <div class="card-text-header">
                     Cytonn Investments:<br>taking a new step
                 </div>
-                <div>
+                <div class="card-text-body">
                     <div>Article by Joseph Owingah<br>Jan 30&nbsp;&nbsp;9 min read</div>
                     <div></div>
                 </div>
@@ -276,24 +268,24 @@
     </div>
 
     <!--fifth-->
-    <div>
-        <div>
+    <div class="fifth">
+        <div class="fifth-text">
             <div>Let us maximize your Investments</div>
-            <div><button class="white-button">GET STARTED</button></div>
+            <div><button class="white-button fifth-button">GET STARTED</button></div>
         </div>
     </div>
 
     <!--sixth-->
     <div class="sixth">
         <div class="sixth-text">
-            <div>Subscribe to our Weekly Updates</div>
-            <div>Get reports and updates from Cytonn Investments about trends in the markets, industries and our Cytonn weekly report.</div>
+            <div class="sixth-text-header">Subscribe to our Weekly Updates</div>
+            <div class="sixth-text-body">Get reports and updates from Cytonn Investments about trends in the markets, industries and our Cytonn weekly report.</div>
         </div>
-        <div>
+        <div class="sixth-form">
             <form>
-                <div>
-                    <input type="text" placeholder="Email Address">
-                    <button class="">SIGN UP</button>
+                <div class="sixth-form-wrapper">
+                    <input class="sixth-form-email" type="text" placeholder="Email Address">
+                    <button class="sixth-button">SIGN UP</button>
                 </div>
             </form>
         </div>
@@ -301,8 +293,8 @@
 
     <!--seventh-->
     <div class="seventh">
-        <div>GETTING STARTED IS SIMPLE</div>
-        <div>
+        <div class="seventh-header">GETTING STARTED IS SIMPLE</div>
+        <div class="seventh-body">
             <div>254 709 101 000</div>
             <div>info@cytonn.com</div>
             <div>Schedule a meeting</div>
@@ -313,18 +305,16 @@
     <!--eighth-->
     <div class="eighth">
 
-        <div>
-
             <div>
                 <div>
-                    <div>TALK TO US</div>
-                    <div>
+                    <div class="contact-header">TALK TO US</div>
+                    <div class="contact-body">
                         <p>KENYA</p>
                         <p>P.O. Box 20695 - 00200, Nairobi, Kenya</p>
                         <p>Cell: +254 (0) 709 101 000</p>
                         <p>Tel: +254 (0) 20 3929 000</p>
                     </div>
-                    <div>
+                    <div class="contact-body">
                         <p>UNITED STATES</p>
                         <p>+1 (301) 982-2560</p>
                         <p>+1 (301) 825-9948</p>
@@ -334,22 +324,22 @@
 
             <div>
                 <div>
-                    <div>KENYA OFFICES</div>
-                    <div>
+                    <div class="contact-header">KENYA OFFICES</div>
+                    <div class="contact-body">
                         <p>3rd Floor, Liaison House, State House Avenue, Nairobi, Kenya</p>
                         <p>6th Floor, The Chancery, Valley Road, Nairobi, Kenya</p>
                     </div>
                 </div>
                 <div>
-                    <div>UNITED STATES OFFICES</div>
-                    <div>
+                    <div class="contact-header">UNITED STATES OFFICES</div>
+                    <div class="contact-body">
                         <p>6411 Ivy Lane, Suite 112 Greenbelt, MD</p>
                         <p>20770</p>
                     </div>
                 </div>
             </div>
 
-            <div>
+            <div class="eighth-three">
                 <div>
                     <p>CO-OP</p>
                     <p>CMS</p>
@@ -363,11 +353,11 @@
             </div>
         </div>
 
-        <div>
-            <div>Privacy and Security</div>
-            <div>Terms of Use Regulatory</div>
-            <div>Disclosures</div>
-            <div>2017 Cytonn Investments</div>
+        <div class="nine">
+            <div class="nine-link">Privacy and Security</div>
+            <div class="nine-link">Terms of Use Regulatory</div>
+            <div class="nine-link">Disclosures</div>
+            <div class="nine-link">2017 Cytonn Investments</div>
         </div>
 
     </div>
@@ -375,10 +365,10 @@
     <!--footer-->
     <div class="footer">
         <div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div class="social-media"><span class="social-media-icon"></span></div>
+            <div class="social-media"><span class="social-media-icon"></span></div>
+            <div class="social-media"><span class="social-media-icon"></span></div>
+            <div class="social-media"><span class="social-media-icon"></span></div>
         </div>
         <div>CYTONN INVESTMENTS 2016.</div>
     </div>
