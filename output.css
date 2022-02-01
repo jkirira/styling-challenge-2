@@ -2,7 +2,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 html, body {
@@ -116,6 +116,7 @@ body {
 }
 
 .form-div {
+  display: none;
   width: 550px;
   height: 500px;
   position: absolute;
@@ -594,6 +595,11 @@ input[type=range] {
   justify-content: center;
 }
 
+@media screen and (min-width: 600px) {
+  .form-div {
+    display: block;
+  }
+}
 @media screen and (min-width: 1000px) {
   .notification {
     justify-content: space-between;
