@@ -62,7 +62,7 @@ body{
 }
 
 .notification{
-  @include container;
+  padding: 0 10%;
   @include flex-center;
   background: $notification-color;
   height: 75px;
@@ -298,7 +298,6 @@ input[type="range"]{
 }
 
 .third-form .block-form-item{
-  width: 80%;
   color: $white;
   font-size: 1.1rem;
 }
@@ -311,7 +310,7 @@ input[type="range"]{
   height: 50px;
   color: grey;
   padding-left: 10px;
-  width: 220px;
+  width: 100%;
   background: rgba(0, 0, 0, 0.5) ;
   font-size: 1rem;
   border: none;
@@ -334,15 +333,21 @@ input[type="range"]{
 //}
 
 .fourth{
+  display: flex;
+  flex-direction: column;
+}
+
+.fourth-items-wrapper{
   display: grid;
   grid-template-columns: repeat(3, 100%);
+  grid-gap: 10px;
   height: 455px;
   color: $white;
   overflow: scroll;
 }
 
 .fourth-item{
-  padding: 0 25%;
+  @include container;
   font-size: 1.5rem;
   text-align: center;
   display: flex;
@@ -386,15 +391,32 @@ input[type="range"]{
 }
 
 .carousel{
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-items-wrapper{
   padding: 30px 10px;
   display: grid;
   grid-template-columns: repeat(4, 100%);
+  grid-gap: 10px;
   overflow: scroll;
 }
 
-.carousel-item{
-  padding: 20px;
-  background: $white;
+.carousel-dots{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+}
+
+.carousel-dot{
+  height: 10px;
+  width: 10px;
+  background: lightgrey;
+  margin: 5px;
+  border-radius: 50%;
 }
 
 .carousel-one{
@@ -564,8 +586,7 @@ input[type="range"]{
   font-weight: 500;
   letter-spacing: 0.7px;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  padding-left: 10%;
   padding-bottom: 50px;
 }
 
@@ -640,12 +661,7 @@ input[type="range"]{
 }
 
 @media screen and (min-width: 600px) {
-  .third{
-    padding: 20px 0;
-  }
-  .form-div {
-    display: block;
-  }
+
   .form-header {
     height: 15%;
     letter-spacing: 4px;
@@ -656,10 +672,8 @@ input[type="range"]{
   }
   .form-div {
     width: 550px;
-    height: 600px;
-    position: absolute;
-    right: 150px;
-    top: -85%;
+    height: 550px;
+    align-self: center;
   }
 
   .filter-button {
@@ -669,12 +683,25 @@ input[type="range"]{
     font-size: 1.1rem;
     letter-spacing: 3px;
   }
+
+  //.third-form .block-form-itemv{
+  //  width: 80%;
+  //  width: 220px;
+  //}
+
   .third-text-body{
     font-size: 1.35rem;
-    padding: 20px 0;
   }
+
+  .search-div{
+    padding-top: 0;
+  }
+
+  .search-button{
+    width: 300px;
+  }
+
   .fourth-item {
-    padding: 20% 25% 0;
   }
   .fourth-item-link{
     flex-direction: row;
@@ -682,13 +709,23 @@ input[type="range"]{
   .carousel{
     padding: 10px;
   }
+  .card-image{
+    height: 500px;
+  }
+  .fifth{
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .fifth-button{
     font-size: 1rem;
   }
   .sixth{
       @include container;
       padding-top: 50px;
-    }
+      padding-bottom: 50px;
+  }
   .sixth-text-body {
     font-size: 1.5rem;
   }
@@ -704,13 +741,9 @@ input[type="range"]{
     align-items: unset;
     text-align: unset;
   }
-  .nine-link{
-     padding: 15px 10px;
-   }
   .eighth-three{
     padding: 50px 0;
   }
-
 
 }
 
@@ -730,13 +763,10 @@ input[type="range"]{
     font-size: 3rem;
     line-height: 3.7rem;
   }
+
   .second{
-    height: 620px;
-    position: relative;
     padding-left: 15%;
-    display: grid;
-    grid-template-columns: 650px 1fr;
-    grid-gap: 10px;
+    padding-top: 15%;
   }
 
   .second-text{
@@ -750,27 +780,23 @@ input[type="range"]{
     font-size: 1.3rem;
   }
 
-  .third{
-    @include container;
-    height: 710px;
-    padding-top: 0;
-    padding-bottom: 0;
+  .form-div{
+    position: absolute;
+    top: -30%;
+    right: 5%;
   }
+
   .third-text-header{
-    font-size: 3rem;
+    //font-size: 3rem;
+    font-size: 2.7rem;
   }
   .third-text-body{
     font-size: 1.5rem;
   }
-  .horizontal-form{
-     display: grid;
-     grid-template-columns: 1fr 1fr 200px;
-     grid-gap: 30px;
-     padding: 10px;
-   }
+
 
   .third-form .block-form-item input {
-    width: 400px;
+    width: 100%;
     font-size: 1.1rem;
   }
   .search-div{
@@ -779,6 +805,10 @@ input[type="range"]{
   .fourth{
     grid-template-columns: repeat(3, minmax(300px, 1fr));
     overflow: unset;
+  }
+  .fourth-items-wrapper{
+    height: unset;
+    min-height: 555px;
   }
   .fourth-item{
     font-size: 1.6rem;
@@ -792,7 +822,7 @@ input[type="range"]{
     display: inline-block;
   }
   .carousel{
-    height: 710px;
+    //height: 710px;
     padding: 100px 50px 20px;
     grid-template-columns: repeat(4, minmax(300px, 1fr));
     overflow: unset;
@@ -805,37 +835,48 @@ input[type="range"]{
   }
   .fifth {
     @include container;
-    padding-top: 150px;
+    //padding-top: 150px;
+    padding-top: 100px;
+    display: block;
+    align-items: unset;
+    justify-content: unset;
+
   }
   .fifth-text{
     font-size: 4rem;
   }
   .sixth {
-    height: 285px;
+    //height: 285px;
   }
   .sixth-form {
-    padding: 20px 100px;
+    //padding: 20px 100px;
+  }
+  .sixth-form form{
+    width: 100%;
   }
   .sixth-form-email {
-    width: 650px;
+    //width: 650px;
     margin-bottom: unset;
   }
   .sixth-form-wrapper{
     flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .sixth-form-wrapper form{
-    width: unset;
-  }
+
   .sixth-button{
+    margin: unset;
     width: 300px;
     margin-left: 30px;
     height: 80px;
   }
   .seventh {
-    height: 225px;
+    //height: 225px;
   }
   .seventh-body{
     flex-direction: row;
+    padding-left: 5%;
   }
   .seventh-body div{
     padding: 0 20px;
@@ -848,11 +889,12 @@ input[type="range"]{
   .eighth-three{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 50px 0 0 150px;
+    //padding: 50px 0 0 150px;
+    padding: 50px 0 0 50px;
   }
 
   .nine{
-    @include container;
+    //@include container;
     display: flex;
     justify-content: center;
   }
@@ -873,5 +915,103 @@ input[type="range"]{
   }
 
   }
+
+@media screen and (min-width: 146re0px){
+  .second{
+    height: 620px;
+    position: relative;
+    padding-left: 15%;
+    display: grid;
+    grid-template-columns: 650px 1fr;
+    grid-gap: 10px;
+    padding-top: unset;
+  }
+
+  .form-div{
+    position: absolute;
+    border: unset;
+    top: -80%;
+    right: 9%;
+  }
+  .form-header {
+    height: 12%;
+  }
+
+    .block-form-item{
+    padding: 10px 20px;
+  }
+
+
+  .third{
+    @include container;
+    height: 710px;
+  }
+
+  .third-text-header {
+    font-size: 3rem;
+  }
+  .third-form{
+    width: 100%;
+    padding: 0 5%;
+  }
+
+  .horizontal-form{
+     display: grid;
+     grid-template-columns: 1fr 1fr 200px;
+     grid-gap: 30px;
+     padding: 10px;
+   }
+  .search-div{
+    justify-content: center;
+    padding: 0;
+  }
+  .search-button{
+    width: 90px;
+  }
+  .fourth-items-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0;
+  }
+  .carousel-item{
+    padding: 20px;
+  }
+  .carousel-items-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .carousel-dots{
+    display: none;
+  }
+  .card-image{
+    height: 350px;
+  }
+  .fifth{
+    padding-top: unset;
+    align-items: center;
+    display: flex;
+  }
+  .sixth{
+    padding-bottom: 20px;
+  }
+  .sixth-form{
+    padding: 20px 15%;
+  }
+  .seventh-body{
+    justify-content: unset;
+    padding-left: 15%;
+  }
+  .seventh-body div{
+    padding: 0 2%;
+  }
+  .eighth{
+    padding: 50px 5% 0 10%;
+  }
+  .eighth-three{
+    padding: 50px 0 0 200px;
+    grid-gap: 50px;
+  }
+
+
+}
 
 

@@ -8,9 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!--    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">-->
-<!--    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="output.css" type="text/css">
-<!--    <script src="https://kit.fontawesome.com/5e756cf1de.js" crossorigin="anonymous"></script>-->
+    <script src="https://kit.fontawesome.com/5e756cf1de.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
@@ -86,7 +86,7 @@
                 </div>
 
                 <div class="block-form-item">
-                    <label>Price Range: <span>Ksh. 10,000.00</span></label>
+                    <label class="filter-text">Price Range: <span>Ksh. 10,000.00</span></label>
                     <input type="range" min="0" max="100" value="0" step="10">
                 </div>
 
@@ -149,27 +149,36 @@
 
     <!--fourth-->
     <div class="fourth">
+        <div class="fourth-items-wrapper">
 
-        <div class="fourth-item amara">
-            <div>
-                <div class="fourth-item-header">AMARA RIDGE</div>
-                <div class="fourth-item-text">exclusive private gated community in Karen</div>
-                <div class="fourth-item-link">VIEW MORE INFO&nbsp;&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></div>
+            <div class="fourth-item amara">
+                <div>
+                    <div class="fourth-item-header">AMARA RIDGE</div>
+                    <div class="fourth-item-text">exclusive private gated community in Karen</div>
+                    <div class="fourth-item-link">VIEW MORE INFO&nbsp;&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></div>
+                </div>
+            </div>
+            <div class="fourth-item situ">
+                <div>
+                    <div class="fourth-item-header">SITU VILLAGE</div>
+                    <div class="fourth-item-text">exclusive private gated community in Karen</div>
+                    <div class="fourth-item-link">VIEW MORE INFO&nbsp;&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></div>
+                </div>
+            </div>
+            <div class="fourth-item alma">
+                <div>
+                    <div class="fourth-item-header">THE ALMA</div>
+                    <div class="fourth-item-text">exclusive private gated community in Karen</div>
+                    <div class="fourth-item-link">VIEW MORE INFO&nbsp;&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></div>
+                </div>
             </div>
         </div>
-        <div class="fourth-item situ">
-            <div>
-                <div class="fourth-item-header">SITU VILLAGE</div>
-                <div class="fourth-item-text">exclusive private gated community in Karen</div>
-                <div class="fourth-item-link">VIEW MORE INFO&nbsp;&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></div>
-            </div>
-        </div>
-        <div class="fourth-item alma">
-            <div>
-                <div class="fourth-item-header">THE ALMA</div>
-                <div class="fourth-item-text">exclusive private gated community in Karen</div>
-                <div class="fourth-item-link">VIEW MORE INFO&nbsp;&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></div>
-            </div>
+
+        <div class="carousel-dots">
+            <span class="carousel-dot"></span>
+            <span class="carousel-dot"></span>
+            <span class="carousel-dot"></span>
+            <span class="carousel-dot"></span>
         </div>
 
     </div>
@@ -177,96 +186,107 @@
 
     <!-- Carousel -->
     <div class="carousel">
-        <!--1-->
-        <div class="carousel-item">
+        <div class="carousel-items-wrapper">
+            <!--1-->
+            <div class="carousel-item">
 
-            <div class="card-image carousel-one">
-                <div class="date-container">
-                    <div class="date">
-                        <p>09</p>
-                        <p>JAN</p>
+                <div class="card-image carousel-one">
+                    <div class="date-container">
+                        <div class="date">
+                            <p>09</p>
+                            <p>JAN</p>
+                        </div>
+                        <div class="date-bottom">READ MORE</div>
                     </div>
-                    <div class="date-bottom">READ MORE</div>
+                </div>
+                <div class="card-text">
+                    <div class="card-text-header">
+                        Cytonn Investments:<br>taking a new step
+                    </div>
+                    <div class="card-text-body">
+                        <div>Article by Joseph Owingah<br><span class="read-time">Jan 30&nbsp;&nbsp;9 min read</span></div>
+                        <div><i class="far fa-bookmark"></i></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!--2-->
+            <div class="carousel-item">
+
+                <div class="card-image carousel-two">
+                    <div class="date-container">
+                        <div class="date">
+                            <p>09</p>
+                            <p>JAN</p>
+                        </div>
+                        <div class="date-bottom">READ MORE</div>
+                    </div>
+                </div>
+                <div class="card-text">
+                    <div class="card-text-header">
+                        Cytonn Investments:<br>taking a new step
+                    </div>
+                    <div class="card-text-body">
+                        <div>Article by Joseph Owingah<br><span class="read-time">Jan 30&nbsp;&nbsp;9 min read</span></div>
+                        <div><i class="far fa-bookmark"></i></div>
+                    </div>
                 </div>
             </div>
-            <div class="card-text">
-                <div class="card-text-header">
-                    Cytonn Investments:<br>taking a new step
+
+            <!--3-->
+            <div class="carousel-item">
+
+                <div class="card-image carousel-three">
+                    <div class="date-container">
+                        <div class="date">
+                            <p>09</p>
+                            <p>JAN</p>
+                        </div>
+                        <div class="date-bottom">READ MORE</div>
+                    </div>
                 </div>
-                <div class="card-text-body">
-                    <div>Article by Joseph Owingah<br><span class="read-time">Jan 30&nbsp;&nbsp;9 min read</span></div>
-                    <div><i class="far fa-bookmark"></i></div>
+                <div class="card-text">
+                    <div class="card-text-header">
+                        Cytonn Investments:<br>taking a new step
+                    </div>
+                    <div class="card-text-body">
+                        <div>Article by Joseph Owingah<br><span class="read-time">Jan 30&nbsp;&nbsp;9 min read</span></div>
+                        <div><i class="far fa-bookmark"></i></div>
+                    </div>
                 </div>
             </div>
+
+            <!--4-->
+            <div class="carousel-item">
+
+                <div class="card-image carousel-four">
+                    <div class="date-container">
+                        <div class="date">
+                            <p>09</p>
+                            <p>JAN</p>
+                        </div>
+                        <div class="date-bottom">READ MORE</div>
+                    </div>
+                </div>
+                <div class="card-text">
+                    <div class="card-text-header">
+                        Cytonn Investments:<br>taking a new step
+                    </div>
+                    <div class="card-text-body">
+                        <div>Article by Joseph Owingah<br><span class="read-time">Jan 30&nbsp;&nbsp;9 min read</span></div>
+                        <div><i class="far fa-bookmark"></i></div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-        <!--2-->
-        <div class="carousel-item">
-
-            <div class="card-image carousel-two">
-                <div class="date-container">
-                    <div class="date">
-                        <p>09</p>
-                        <p>JAN</p>
-                    </div>
-                    <div class="date-bottom">READ MORE</div>
-                </div>
-            </div>
-            <div class="card-text">
-                <div class="card-text-header">
-                    Cytonn Investments:<br>taking a new step
-                </div>
-                <div class="card-text-body">
-                    <div>Article by Joseph Owingah<br><span class="read-time">Jan 30&nbsp;&nbsp;9 min read</span></div>
-                    <div><i class="far fa-bookmark"></i></div>
-                </div>
-            </div>
-        </div>
-
-        <!--3-->
-        <div class="carousel-item">
-
-            <div class="card-image carousel-three">
-                <div class="date-container">
-                    <div class="date">
-                        <p>09</p>
-                        <p>JAN</p>
-                    </div>
-                    <div class="date-bottom">READ MORE</div>
-                </div>
-            </div>
-            <div class="card-text">
-                <div class="card-text-header">
-                    Cytonn Investments:<br>taking a new step
-                </div>
-                <div class="card-text-body">
-                    <div>Article by Joseph Owingah<br><span class="read-time">Jan 30&nbsp;&nbsp;9 min read</span></div>
-                    <div><i class="far fa-bookmark"></i></div>
-                </div>
-            </div>
-        </div>
-
-        <!--4-->
-        <div class="carousel-item">
-
-            <div class="card-image carousel-four">
-                <div class="date-container">
-                    <div class="date">
-                        <p>09</p>
-                        <p>JAN</p>
-                    </div>
-                    <div class="date-bottom">READ MORE</div>
-                </div>
-            </div>
-            <div class="card-text">
-                <div class="card-text-header">
-                    Cytonn Investments:<br>taking a new step
-                </div>
-                <div class="card-text-body">
-                    <div>Article by Joseph Owingah<br><span class="read-time">Jan 30&nbsp;&nbsp;9 min read</span></div>
-                    <div><i class="far fa-bookmark"></i></div>
-                </div>
-            </div>
+        <div class="carousel-dots">
+            <span class="carousel-dot"></span>
+            <span class="carousel-dot"></span>
+            <span class="carousel-dot"></span>
+            <span class="carousel-dot"></span>
         </div>
 
     </div>
