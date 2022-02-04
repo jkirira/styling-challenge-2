@@ -74,13 +74,15 @@ body{
   font-weight: lighter;
   background: $grey;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  height: 90px;
   color: $white;
 }
 
 .logo{
   padding-left: 30px;
+  height: 100px;
+  position: relative;
 }
 
 .logo img{
@@ -90,29 +92,49 @@ body{
 }
 
 .nav{
+  //display: flex;
   display: none;
+  flex-direction: column;
 }
 
 .sub-nav{
   padding: 0 10px;
   display: flex;
+  flex-direction: column;
 }
 
 .book-nav{
   display: flex;
   width: 200px;
+  flex-direction: column;
+  margin: auto;
 }
 
 .book-button{
   width: 100%;
   display: flex;
   @include flex-center;
+  padding: 10px;
+  margin: 10px 0;
 }
 
 .nav-item{
   padding: 10px 30px;
   display: flex;
   @include flex-center;
+}
+
+.hamburger-div {
+  cursor: pointer;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .splash{
@@ -748,13 +770,41 @@ input[type="range"]{
 }
 
 @media screen and (min-width: 1000px) {
+  .hamburger-div{
+    display: none;
+  }
+
   .notification{
     justify-content: space-between;
     font-size: 1.2rem;
   }
+  .header{
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    color: $white;
+    flex-direction: row;
+  }
+
   .nav{
-     display: flex;
-   }
+    display: flex;
+    flex-direction: row;
+  }
+
+  .sub-nav{
+    flex-direction: row;
+  }
+
+  .book-nav{
+    flex-direction: row;
+    margin: initial;
+  }
+
+  .book-button{
+    padding: unset;
+    margin: unset;
+  }
+
   .splash{
     height: 890px;
   }
