@@ -51,6 +51,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   color: #ffffff;
+  letter-spacing: 2px;
 }
 
 .logo {
@@ -78,7 +79,7 @@ body {
 
 .book-nav {
   display: flex;
-  width: 200px;
+  width: 250px;
   flex-direction: column;
   margin: auto;
 }
@@ -449,7 +450,7 @@ input[type=range] {
   left: 0;
   bottom: 0;
   height: 150px;
-  width: 95px;
+  width: 110px;
 }
 
 .date {
@@ -471,7 +472,7 @@ input[type=range] {
   justify-content: center;
   padding: 2px;
   align-items: center;
-  font-weight: 600;
+  font-weight: 300;
 }
 
 .card-text {
@@ -496,17 +497,17 @@ input[type=range] {
 
 .fifth {
   padding: 0 10%;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0), #b29759), url(photo_5.jpg);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), #b29759), url(photo_5.jpg);
   height: 515px;
   padding-top: 100px;
   color: #ffffff;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: round;
   object-fit: fill;
 }
 
 .fifth-text {
-  max-width: 500px;
+  max-width: 600px;
   font-size: 2.5rem;
 }
 
@@ -739,10 +740,6 @@ input[type=range] {
     padding-bottom: 50px;
   }
 
-  .sixth-text-body {
-    font-size: 1.5rem;
-  }
-
   .sixth-form-email {
     height: 80px;
     font-size: 1.3rem;
@@ -888,7 +885,7 @@ input[type=range] {
   }
 
   .fifth {
-    padding: 0 15%;
+    padding: 0 10%;
     padding-top: 100px;
     display: block;
     align-items: unset;
