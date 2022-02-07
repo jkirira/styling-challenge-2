@@ -44,6 +44,11 @@ body {
   color: #ffffff;
 }
 
+.bold-underline {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 .header {
   font-weight: lighter;
   background: #23282b;
